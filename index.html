@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="icon" href="title.png" type="image/png">
+  </head>
+  <body>
+    <nav>
+      <div class="portfolio">Port<span>Folio</span></div>
+      <ul>
+        <a href="index.html">
+          <li>Home</li>
+        </a>
+        <a href="#About" onclick="About()">
+          <li>About</li>
+        </a>
+        <a href="#skills" onclick=" skills()">
+          <li>Skills</li>
+        </a>
+        <a href="#services" onclick = "alert('No Services yet! 😔')">
+          <li>Services</li>
+        </a>
+        <!-- <a href="#portfolio">
+          <li>Portfolio</li>
+        </a> -->
+        <a href="#contact" onclick="contact()">
+          <li>Contact</li>
+        </a>
+      </ul>
+    </nav>
+
+    <div id="container">
+      <div class="hero-discription">
+        <div class="hero-image">
+          <div class="img-container">
+            <img src="./images/pfp.png" alt="" class="img" />
+          </div>
+        </div>
+        <div class="intro">
+          <h1>Aarya Bhatt</h1>
+          <h2>I'm a <span class="profession">Full Stack Developer</span></h2>
+          <p>
+            Crafting code that clicks—from React UIs to Node.js backends—turning<br />
+            problems into smart,
+            clean solutions with a hint of flair.
+          </p>
+          <div class="cta-container">
+
+          <button class = "btn" onclick="window.location.href='mailto:bhattarya190@gmail.com?subject=Hi&body=Hello!'">
+  Get in touch
+</button>
+<a href="https://www.instagram.com/shad0w_mistx/"><i class="fa-brands fa-instagram media"></i></a>
+<a href="https://github.com/bhattarya1234"><i class="fa-brands fa-github media"></i></a>
+<a href="https://x.com/AryaBhatt298280"><i class="fa-brands fa-twitter media"></i></a>
+<a href="https://www.facebook.com/profile.php?id=100079258781761"><i class="fa-brands fa-facebook media"></i></a>
+<a href="https://discord.com/users/1374402512949481502"><i class="fa-brands fa-discord media"></i></a>
+        </div>
+        </div>
+      </div>
+      <footer style="color: rgb(197, 197, 197); opacity: 0.5">
+        © 2025 Aarya Bhatt, last updated 23 October 2025
+      </footer>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
