@@ -1,7 +1,7 @@
 # ✨ Aarya Bhatt | Full Stack Developer Portfolio ✨
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Portfolio Live](https://img.shields.io/badge/View%20Live%20Portfolio-%E2%86%97-blueviolet)](https://your-portfolio-url.com) [![GitHub Followers](https://img.shields.io/github/followers/bhattarya1234?style=social)](https://github.com/bhattarya1234)
+[![Portfolio Live](https://img.shields.io/badge/View%20Live%20Portfolio-%E2%86%97-blueviolet)](https://bhattarya1234.github.io/portfolio) [![GitHub Followers](https://img.shields.io/github/followers/bhattarya1234?style=social)](https://github.com/bhattarya1234)
 
 <br>
 
