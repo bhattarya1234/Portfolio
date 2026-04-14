@@ -85,6 +85,8 @@ h1 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+/* IMAGE FIX ONLY */
 .hero-image {
   position: relative;
   height: 24.4vw;
@@ -97,6 +99,7 @@ h1 {
   transform: scale(1.2);
   overflow: hidden;
 }
+
 .hero-image::after,
 .hero-image::before {
   content: "";
@@ -111,6 +114,7 @@ h1 {
   animation: rotate 7s linear infinite;
 
 }
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -122,27 +126,31 @@ h1 {
     transform: rotate(360deg);
   }
 }
+
 .img {
   position: absolute;
-  height: 15vw;
-  width: 12.5vw;
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
-  transform: scale(1.6);
-  margin-left: 2vh;
-  object-fit:cover;
+  object-fit: cover;
+  margin-left: 0;
+  transform: none;
 }
+
 .img-container {
   position: absolute;
-  height: 15vw;
-  width: 15vw;
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
-  /* transform: scale(1.6); */
   background: #151120;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  transform: none;
 }
+/* IMAGE FIX END */
+
 .portfolio {
   font-size: 3em;
   margin: auto;
