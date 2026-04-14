@@ -136,7 +136,7 @@ h1 {
   height: 15vw;
   width: 15vw;
   border-radius: 50%;
-  transform: scale(1.6);
+  /* transform: scale(1.6); */
   background: #151120;
   display: flex;
   justify-content: center;
