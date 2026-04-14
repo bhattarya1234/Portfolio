@@ -86,7 +86,7 @@ h1 {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/* IMAGE FIX ONLY */
+/* 🔥 UPGRADED IMAGE SYSTEM */
 .hero-image {
   position: relative;
   height: 24.4vw;
@@ -96,45 +96,38 @@ h1 {
   justify-content: center;
   align-items: center;
   z-index: 1;
+  overflow: visible;
   transform: scale(1.2);
-  overflow: hidden;
 }
 
-.hero-image::after,
-.hero-image::before {
+.hero-image::before,
+.hero-image::after {
   content: "";
   position: absolute;
-  height: 25vw;
-  width: 15vw;
-  z-index: -1;
-  background:#7cf03d;
-  /* background: #4a198a; */
-  transform: rotate(45deg);
-
+  inset: -10px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #7cf03d,
+    #54239f,
+    #00c2ff,
+    #7cf03d
+  );
   animation: rotate 7s linear infinite;
+  z-index: -1;
+}
 
+.hero-image::after {
+  filter: blur(10px);
+  opacity: 0.7;
 }
 
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
-  50% {
-    transform: rotate(180deg);
-  }
   100% {
     transform: rotate(360deg);
   }
-}
-
-.img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-left: 0;
-  transform: none;
 }
 
 .img-container {
@@ -147,9 +140,18 @@ h1 {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transform: none;
 }
-/* IMAGE FIX END */
+
+.img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: none;
+  margin-left: 0;
+}
+/* 🔥 END IMAGE UPGRADE */
 
 .portfolio {
   font-size: 3em;
