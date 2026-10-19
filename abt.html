@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root {
+        --headings: 13111c;
+        --terminal: 13111c;
+        --border-color: #393447;
+        --keyword: rgb(200, 43, 171);
+        --keyword_info: rgb(83, 37, 127);
+      }
+      #container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter", sans-serif;
+        flex-direction: column;
+      }
+      .heroTerminal {
+        width: 90%;
+        max-width: 1200px;
+        min-height: 370px;
+        height: auto;
+        margin-top: 20vh;
+        background: var(--terminal);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 25px 45px rgba(15, 23, 42, 0.15);
+        border: 2px solid var(--border-color);
+      }
+      .terminalHeading {
+        height: 44px;
+
+        background: var(--headings);
+        display: flex;
+        border-radius: 12px 12px 0 0;
+        font-family: "Sora", sans-serif;
+        border-bottom: 1px solid #9798995f;
+        font-size: 12px;
+      }
+      .section1,
+      .section2 {
+        height: 100%;
+        /* padding: 12px 16px; */
+        /* background: yellow; */
+      }
+
+      .section1 {
+        width: 25%;
+        /* background: blue; */
+        border-radius: 12px 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1vh;
+      }
+      .section2 {
+        flex: 0.7;
+        /* background: gray; */
+        border-radius: 0 12px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .section2 p {
+        color: rgb(158, 164, 171);
+      }
+      .section2 span {
+        color: rgb(123, 158, 234);
+      }
+      i {
+        font-size: smaller;
+      }
+      .c1 {
+        color: rgb(255, 95, 86);
+        margin-left: 10%;
+      }
+      .c2 {
+        color: #ffbd29;
+      }
+      .c3 {
+        color: rgb(39, 201, 63);
+      }
+      .main {
+        min-height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 25px;
+        font-family: "JetBrains Mono", monospace;
+      }
+      /* .profile {
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      } */
+      .codeContent {
+        flex: 1;
+        min-width: 0;
+        /* background: #1bf81b; */
+      }
+
+      .indent {
+        /* color: rgb(70, 45, 116); */
+        color: var(--keyword);
+        padding: 5px;
+      }
+      .indent2 {
+        color: rgb(211, 57, 83);
+      }
+      .code {
+        /* color: rgb(43, 145, 50); */
+        color: var(--keyword_info);
+        padding: 3px;
+        font-size: large;
+      }
+      /* .status{
+  position: absolute;
+  bottom: 8%;
+  right: 25%;
+  color: #1bf81b;
+  font-size: 15px;
+  border: 3px solid #f8fafc;
+  border-radius: 50%;
+      } */
+      .profile {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .profileImage {
+        position: relative;
+        width: min(65vw, 250px);
+      }
+
+      .profileImage img.hero {
+        width: 100%;
+        display: block;
+        border-radius: 50%;
+        border: 4px solid rgb(67, 28, 103);
+        padding: 1vh;
+      }
+
+      .status {
+        position: absolute;
+        bottom: 30px;
+        right: 17px;
+        color: #15c015;
+        font-size: 17px;
+        border: 3px solid rgb(248, 250, 252);
+        border-radius: 50%;
+      }
+      #CursorBlink {
+        font-size: large;
+        color: rgb(148, 159, 155);
+        animation: cursorBlink 1s step-end infinite;
+      }
+      @keyframes cursorBlink {
+        50% {
+          opacity: 0;
+        }
+      }
+      .abt_image {
+        border-radius: 12px;
+        border: 2px solid black;
+        padding: 2vh;
+        width: min(65vw, 250px);
+      }
+      .heroInfo {
+        flex: 0 0 150px;
+        min-width: 0;
+        /* background: #000; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .projCount,
+      .experience {
+        background: #b0b0afb7;
+        padding: 2vh;
+        border: rgba(0, 0, 0, 0.699);
+        border-radius: 7px;
+        color: black;
+        height: fit-content;
+        /* color: #1bf81b; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .heroTerminal {
+        animation: terminalReveal linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 80%;
+      }
+      .contactIcon {
+  color: #008192;
+  width: 22px;
+  margin-right: 8px;
+}
+
+.codeContent a {
+  color: #15c015;
+  text-decoration: none;
+}
+
+.codeContent a:hover {
+  text-decoration: underline;
+}
+
+      @keyframes terminalReveal {
+        from {
+          opacity: 0;
+          transform: translateY(60px) scale(0.97);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+.socialLinks {
+  display: flex;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.socialLinks a {
+  color: #008192;
+  font-size: 22px;
+  transition: 0.2s ease;
+}
+
+.socialLinks a:hover {
+  color: #a73434;
+  transform: translateY(-3px);
+}
+
+
+      /* for responsive dawg dont touch ts shii */
+      @media (max-width: 768px) {
+        .heroTerminal {
+          width: 94%;
+          height: auto;
+          min-height: 400px;
+          margin: 12vh auto 3vh;
+        }
+
+        .main {
+          flex-direction: column;
+          padding: 25px 15px;
+          gap: 25px;
+        }
+
+        .profile {
+          width: 100%;
+        }
+
+        .profileImage {
+          width: min(55vw, 180px);
+        }
+
+        .codeContent {
+          width: 100%;
+          flex: none;
+          overflow-wrap: anywhere;
+          font-size: 13px;
+        }
+
+        .code {
+          font-size: 13px;
+        }
+
+        .indent {
+          font-size: 14px;
+        }
+
+        .terminalHeading {
+          height: 44px;
+        }
+        .heroInfo {
+          width: 100%;
+          flex: none;
+          flex-direction: row;
+          gap: 20px;
+        }
+
+        .projCount,
+        .experience {
+          flex: 1;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .heroTerminal {
+          width: 96%;
+        }
+
+        .main {
+          padding: 20px 10px;
+        }
+
+        .codeContent,
+        .code {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <nav>
+        <div id="portfolio_label">Port<span>Folio</span></div>
+        <div id="links">
+          <a href="index.html">Home</a>
+          <a href="abt.html">About</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button id="mode">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-sun-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+            />
+          </svg>
+        </button>
+        <button id="menuBtn">☰</button>
+      </nav>
+
+      <!-- heroSection -->
+      <div class="heroTerminal">
+        <div class="terminalHeading">
+          <div class="section1">
+            <i class="fa-solid fa-circle c1"></i>
+            <i class="fa-solid fa-circle c2"></i>
+            <i class="fa-solid fa-circle c3"></i>
+          </div>
+          <div class="section2">
+            <p>~ / portfolio / <span>hero</span></p>
+          </div>
+        </div>
+        <div class="main">
+          <div class="profile">
+            <div class="profileImage">
+              <img
+                class="hero"
+                src="https://bhattarya1234.github.io/trashFolio/images/pfp2.png"
+                alt="Profile picture"
+              />
+              <i class="fa-solid fa-circle status"></i>
+            </div>
+          </div>
+          <div class="codeContent">
+            <p class="indent">const developer <span>= {</span></p>
+            <p class="code">name : "Aarya Bhatt" ,</p>
+            <p class="code">role : "Full-Stack Developer & UI/UX Designer" ,</p>
+            <p class="code">location : "Dhangadhi-7, Kailali" ,</p>
+            <p class="code">
+              projects: ["Script flux", "Insta Clone", "Smart Mirror UI", "Mini
+              Games"],
+            </p>
+            <p class="code">email: "bhattarya190@gmail.com",</p>
+            <span>}; </span><span id="CursorBlink">|</span>
+          </div>
+        </div>
+      </div>
+<div class="blog"  id = "blog"></div>
+      <div class="heroTerminal">
+        <div class="terminalHeading">
+          <div class="section1">
+            <i class="fa-solid fa-circle c1"></i>
+            <i class="fa-solid fa-circle c2"></i>
+            <i class="fa-solid fa-circle c3"></i>
+          </div>
+          <div class="section2">
+            <p>~ / portfolio / <span>about</span></p>
+          </div>
+        </div>
+        <div class="main">
+          <div class="profile">
+            <div class="profileImage">
+              <img
+                class="abt_image"
+                src="https://bhattarya1234.github.io/trashFolio/images/pfp2.png"
+                alt="Profile picture"
+              />
+            </div>
+          </div>
+          <div class="codeContent">
+            <i><p>// The story of my journey</p></i><br />
+            <p class="indent indent2">
+              "I specialize in building modern web applications using React,
+              Node.js, and cloud technologies. With a background in both
+              engineering and design, I bridge the gap between technical
+              implementation and user experience. I've led teams at startups and
+              enterprises, shipping products used by millions. When I'm not
+              coding, you'll find me mentoring junior developers, contributing
+              to open-source projects, or exploring the latest in AI and machine
+              learning."
+            </p>
+          </div>
+          <div class="heroInfo">
+            <div class="projCount">
+              <p>Projects:</p>
+              <h2 id="projectCount">--</h2>
+            </div>
+            <div class="experience">
+              <i><p>EXP_YEARS:</p></i>
+              <b><p>3+</p></b>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="heroTerminal" id = "contact">
+        <div class="terminalHeading">
+          <div class="section1">
+            <i class="fa-solid fa-circle c1"></i>
+            <i class="fa-solid fa-circle c2"></i>
+            <i class="fa-solid fa-circle c3"></i>
+          </div>
+          <div class="section2">
+            <p>~ / portfolio / <span>Contact</span></p>
+          </div>
+        </div>
+        <div class="main">
+ <div class="codeContent">
+  <i><p class="comment">// Let's build something together</p></i>
+
+  <br><br>
+
+  <p>
+    <i class="fa-solid fa-envelope contactIcon"></i>
+    <span class="keyword">email:</span>
+    <a href="mailto:bhattarya190@gmail.com">"bhattarya190@gmail.com"</a>
+  </p>
+
+  <p>
+    <i class="fa-solid fa-phone contactIcon"></i>
+    <span class="keyword">phone:</span> "+977-9848456771"
+  </p>
+
+  <p>
+    <i class="fa-solid fa-location-dot contactIcon"></i>
+    <span class="keyword">location:</span> "Dhangadhi, Kailali"
+  </p>
+
+  <br><br>
+
+  <h2>&lt;Aarya/&gt;</h2>
+  <p>Building the future of the web.</p>
+
+<div class="socialLinks">
+  <a class="contactLinks" href="https://www.instagram.com/w0.ami/" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a class="contactLinks" href="https://github.com/bhattarya1234" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-github"></i>
+  </a>
+
+  <a class="contactLinks" href="https://www.facebook.com/profile.php?id=100079258781761" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+
+  <a class="contactLinks" href="https://discord.com/users/1374402512949481502" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-discord"></i>
+  </a>
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      async function getProjects() {
+        try {
+          const response = await fetch(
+            "https://api.github.com/users/bhattarya1234/repos?per_page=100",
+          );
+
+          if (!response.ok) throw new Error("GitHub API error");
+
+          const repos = await response.json();
+          const projects = repos.filter((repo) => !repo.fork);
+
+          document.querySelector("#projectCount").textContent =
+            projects.length + "+";
+        } catch (error) {
+          document.querySelector("#projectCount").textContent = "N/A";
+          console.error(error);
+        }
+      }
+
+      getProjects();
+    </script>
+  </body>
+</html>
