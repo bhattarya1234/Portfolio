@@ -3,6 +3,7 @@ let menuBtn = document.getElementById("menuBtn");
 let modeToggle = document.getElementById("mode");
 let isToggled = false;
 let container = document.getElementById("container");
+// let heroTerminal = document.querySelector(".heroTerminal");
 
 menuBtn.addEventListener("click", () => {
   links.classList.toggle("active");
@@ -22,6 +23,14 @@ modeToggle.addEventListener("click", () => {
     document.documentElement.style.setProperty("--text-color1", "#25272B");
     document.documentElement.style.setProperty("--text-colorH1", "#292B30");
     document.documentElement.style.setProperty("--text-colorP", "#686868");
+    document.documentElement.style.setProperty(
+      "--terminal",
+      "rgb(248, 250, 252)",
+    );
+    document.documentElement.style.setProperty(
+      "--headings",
+      "rgb(225, 224, 235)",
+    );
 
     document.documentElement.style.setProperty(
       "--btn-border",
@@ -31,6 +40,16 @@ modeToggle.addEventListener("click", () => {
       "--btn-bg",
       "rgba(37, 39, 43, 0.05)",
     );
+    document.documentElement.style.setProperty(
+      "--border-color",
+      "#d1d5db",
+    );
+    
+    document.documentElement.style.setProperty("--keyword", "rgb(70, 45, 116)");
+    document.documentElement.style.setProperty("--keyword_info", "rgb(43, 145, 50)");
+
+    // heroTerminal.style.borderColor = rgb(225, 224, 235);
+
   } else {
     // dark theme
     modeToggle.innerHTML =
@@ -59,19 +78,25 @@ modeToggle.addEventListener("click", () => {
       "--btn-bg",
       "rgba(240, 248, 255, 0.06)",
     );
+
+    document.documentElement.style.setProperty("--headings", "rgb(19, 17, 28)");
+    document.documentElement.style.setProperty("--terminal", "rgb(19, 17, 28)");
+        document.documentElement.style.setProperty(
+      "--border-color",
+      "#393447",
+    );
+
+    document.documentElement.style.setProperty("--keyword", "rgb(200, 43, 171)");
+    document.documentElement.style.setProperty("--keyword_info", "rgb(83, 37, 127)");
+      
   }
 });
 
-
-        //for autotyping library
-    var typed = new Typed('#element', {
-      strings:["Full Stack Developer","MERN Stack Developer","Programmer", "Designer"],
-      typeSpeed: 65,
-      backSpeed: 35,
-      backDelay: 1200,
-      loop: true
-    });
-
-
-
-
+//for autotyping library
+var typed = new Typed("#element", {
+  strings: ["Full Stack Dev", "MERN Stack Dev", "Programmer", "Designer"],
+  typeSpeed: 65,
+  backSpeed: 35,
+  backDelay: 1200,
+  loop: true,
+});
